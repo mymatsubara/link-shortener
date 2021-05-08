@@ -35,7 +35,7 @@ services:
   loadbalancer:
     image: nginx
     ports:
-      - 443:80
+      - 443:443
     volumes: 
       - ./nginx:/etc/nginx
     depends_on:
