@@ -22,6 +22,6 @@ export const MAIL_ADDRESS = process.env.MAIL_ADDRESS;
 export const MAIL_SMTP = process.env.MAIL_SMTP;
 export const MAIL_PASSWORD = process.env.MAIL_PASSWORD;
 
-export const FRONTEND_URL = "http://localhost:4000"
+export const FRONTEND_URL = process.env.NGINX_ADDR || "http://localhost:4000"
 
 export const INVITE_EXPIRE = 3600 * 24 * 7 * 1000;  // 7 dias
