@@ -26,8 +26,8 @@ services:
       - redis
   frontend:
     build: frontend/.
-    environment:
-      - NGINX_ADDR=https://accamargo.ddns.net
+    env_file:
+      - ./.env
     ports:
       - 3000:3000
     depends_on:
