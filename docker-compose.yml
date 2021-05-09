@@ -34,9 +34,13 @@ services:
       - backend      
   loadbalancer:
     image: nginx
+    environment:
+      - NGINX_DOMAIN=accamargo.ddns.net
     ports:
       - 443:443
+      - 80:80
     volumes: 
       - ./nginx:/etc/nginx
+    command: /bin/bash -c "sh /etc/nginx/run_nginx.sh"
     depends_on:
       - backend
