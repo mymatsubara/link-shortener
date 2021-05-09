@@ -6,5 +6,9 @@ POSTGRES_PASSWORD=<db password>
 ADMIN_PASSWORD=<admin password>
 MAIL_ADDRESS=<mail address>
 MAIL_PASSWORD=<mail password>
-NGINX=ADDR=<nginx https address>
+```
+
+You also should change the variable in `frontend/.env.local`:
+````
+NEXT_PUBLIC_NGINX_ADDR=<nginx https address>
 ```
